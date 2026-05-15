@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
-  "name": "YouTube Shorts Auto-Scroll",
-  "version": "1.2",
+  "name": "Red_Short_Scroller",
+  "version": "1.2b",
   "action": {
     "default_popup": "popup.html",
     "default_icon": "shuriken.png"
