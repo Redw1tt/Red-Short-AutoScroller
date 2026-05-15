@@ -1,4 +1,5 @@
 _______________________________________________________________________________
+
   PRESENTS: REDW1TT AUTO SCROLLER v1.2a (YOUTUBE & INSTAGRAM EDITION)
   RELEASE DATE: 2026-05-15
   PLATFORM....: CHROMIUM (CHROME, BRAVE, EDGE, CACHYOS)
