@@ -1,0 +1,67 @@
+_______________________________________________________________________________
+   ____  _____ ____  _      _  _   _____ _____   ____   ____ ____  
+  |  _ \| ____|  _ \| | \/ | || | |_   _|_   _| / ___| / ___|  _ \ 
+  | |_) |  _| | | | | | |  | || |   | |   | |   \___ \| |   | |_) |
+  |  _ <| |___| |_| | |/ \/ || |   | |   | |    ___) | |___|  _ < 
+  |_| \_\_____|____/|___/\___||_|   |_|   |_|   |____/ \____|_| \_\
+                                                                
+_______________________________________________________________________________
+  PRESENTS: REDW1TT AUTO SCROLLER v1.2a (YOUTUBE & INSTAGRAM EDITION)
+  RELEASE DATE: 2026-05-15
+  PLATFORM....: CHROMIUM (CHROME, BRAVE, EDGE, CACHYOS)
+  TYPE........: AUTO-SCROLL UTILITY
+
+
+_______________________________________________________________________________
+ [ DESCRIPTION ]
+
+ Fatigue de scroller ? REDW1TT_SCR s'occupe de tout. 
+ Compatible avec YouTube Shorts et Instagram Reels.
+ Interface optimisée pour Windows & Linux.
+
+_______________________________________________________________________________
+ [ INSTALLATION NOTES ]
+
+  1. Decompressez l'archive dans un dossier de votre choix.
+  2. Ouvrez votre navigateur base sur CHROMIUM.
+  3. Tapez 'chrome://extensions' dans la barre d'adresse.
+  4. Activez le [ DEVELOPER MODE ] en haut a droite.
+  5. Cliquez sur [ LOAD UNPACKED ] (Charger l'extension).
+  6. Selectionnez le dossier et validez.
+
+_______________________________________________________________________________
+ [ GAMING & BACKGROUND SETUP ]
+
+  Pour eviter que le navigateur ne "gele" le script pendant que tu joues :
+
+  1. NE REDUIS PAS LA FENETRE : Laisse Chrome/Brave ouvert derriere ton jeu.
+     Si tu le minimises dans la barre des taches, Windows coupera le script.
+  2. DESACTIVE L'ECONOMIE DE MEMOIRE :
+     Allez dans Parametres > Performance > Desactiver "Economiseur de memoire".
+     Ou ajoute 'youtube.com' dans la liste "Toujours garder actifs".
+  3. GESTION DU SON :
+     Ne mets pas la video en "Mute" via le lecteur YouTube (ca bloque parfois 
+     le passage au suivant). Baisse plutot le son via le Melangeur de Volume 
+     Windows ou Linux pour ne pas etre gene en jouant.
+  4. MODE SANS ECHEC :
+     Si le jeu est tres gourmand, detache l'onglet YouTube dans une fenetre 
+     separee pour qu'il garde sa priorite processeur.
+
+_______________________________________________________________________________     
+ [ USAGE ]
+
+  * ON/OFF : Utilisez le switcher dans la popup d'extension.
+  * HOTKEY : Appuyez sur 'S' pour skip instantanement (si l'onglet a le focus).
+
+_______________________________________________________________________________
+ [ CREDITS ]
+
+  DESIGNED BY REDW1TT
+  SUPPORTS: YT SHORTS & IG REELS
+  
+  "Stay focused on the game, let us scroll the rest."
+
+______________________________________________________________________________
+      ASCII ART BY REDW1TT - 2026 - NO LIMITS - NO BOUNDARIES
+           ** Wake up samurai, we have a city to burn ! **
+_______________________________________________________________________________

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    :root {
+      --bg: #111827;
+      --accent: #deff9a;
+      --text: #f3f4f6;
+      --red: #ff0000;
+      --white: #ffffff;
+      --black: #000000;
+    }
+    body { 
+      width: 250px; 
+      margin: 0; 
+      padding: 20px; 
+      background-color: var(--bg); 
+      color: var(--text);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      text-align: center;
+    }
+
+    /* Le Titre Stylisé REDW1TT */
+    .brand-title {
+      font-size: 18px;
+      font-weight: bold; /* En gras comme demandé */
+      margin-bottom: 25px;
+      letter-spacing: 1px;
+    }
+    .red { color: var(--red); }
+    .white { color: var(--white); }
+    /* Le 1 en noir avec un fond pour la visibilité */
+    .one { 
+      color: var(--black); 
+      background-color: var(--white); 
+      padding: 0 4px; 
+      border-radius: 3px; 
+      margin: 0 1px;
+    }
+    .scroller { color: var(--white); opacity: 0.9; margin-left: 5px; }
+
+    /* Le Switch */
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 60px;
+      height: 34px;
+    }
+    .switch input { opacity: 0; width: 0; height: 0; }
+    .slider {
+      position: absolute; cursor: pointer;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-color: #374151;
+      transition: .4s; border-radius: 34px;
+    }
+    .slider:before {
+      position: absolute; content: "";
+      height: 26px; width: 26px; left: 4px; bottom: 4px;
+      background-color: white; transition: .4s; border-radius: 50%;
+    }
+    input:checked + .slider { background-color: var(--accent); }
+    input:checked + .slider:before { transform: translateX(26px); background-color: var(--bg); }
+    
+    .status-text { margin-top: 15px; font-size: 11px; font-weight: bold; opacity: 0.8; text-transform: uppercase; }
+  </style>
+</head>
+<body>
+  <div class="brand-title">
+    <span class="red">RED</span><span class="white">W</span><span class="one">1</span><span class="white">TT</span>
+    <span class="scroller">SCROLLER</span>
+  </div>
+
+  <label class="switch">
+    <input type="checkbox" id="toggleCheck">
+    <span class="slider"></span>
+  </label>
+
+  <div id="status" class="status-text">CHARGEMENT...</div>
+  <script src="popup.js"></script>
+</body>
+</html>

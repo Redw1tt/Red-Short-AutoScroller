@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Shorts Auto-Scroll",
+  "version": "1.2",
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "shuriken.png"
+  },
+  "icons": {
+    "128": "shuriken.png"
+  },
+  "permissions": ["storage"],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.youtube.com/shorts/*",
+        "https://www.instagram.com/reels/*",
+        "https://www.instagram.com/reels/videos/*"
+      ],
+      "js": ["content.js"]
+    }
+  ]
+}
