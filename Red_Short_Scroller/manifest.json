@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
-  "name": "Red_Short_Scroller",
-  "version": "1.2b",
+  "name": "REDW1TT SCROLLER",
+  "version": "1.2.2",
   "action": {
     "default_popup": "popup.html",
     "default_icon": "shuriken.png"
