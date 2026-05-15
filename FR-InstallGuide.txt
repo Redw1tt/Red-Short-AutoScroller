@@ -27,7 +27,7 @@ _______________________________________________________________________________
   3. Tapez 'chrome://extensions' dans la barre d'adresse.
   4. Activez le [ DEVELOPER MODE ] en haut a droite.
   5. Cliquez sur [ LOAD UNPACKED ] (Charger l'extension).
-  6. Selectionnez le dossier et validez.
+  6. Selectionnez le dossier "Red_Short_Scroller" et validez.
 
 _______________________________________________________________________________
  [ GAMING & BACKGROUND SETUP ]
