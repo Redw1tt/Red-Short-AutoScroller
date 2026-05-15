@@ -6,7 +6,7 @@ _______________________________________________________________________________
   |_| \_\_____|____/|___/\___||_|   |_|   |_|   |____/ \____|_| \_\
                                                                 
 _______________________________________________________________________________
-  PRESENTS: REDW1TT AUTO SCROLLER v1.2a (YOUTUBE & INSTAGRAM EDITION)
+  PRESENTS: REDW1TT AUTO SCROLLER v1.2b (YOUTUBE & INSTAGRAM EDITION)
   RELEASE DATE: 2026-05-15
   PLATFORM....: CHROMIUM (CHROME, BRAVE, EDGE, CACHYOS)
   TYPE........: AUTO-SCROLL UTILITY
