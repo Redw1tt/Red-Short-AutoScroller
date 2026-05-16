@@ -39,37 +39,38 @@ function passerAuSuivant() {
             const boutonSuivantIG = boutonsIG[0].closest('button');
             if (boutonSuivantIG) boutonSuivantIG.click();
         }
-    } else if (url.includes("tiktok.com")) {
-        // L'ANALYSE DU CODE POUR TIKTOK :
-        // Sur TikTok Web, les boutons de navigation ont des attributs de données "data-e2e"
-        const boutonSuivantTT = document.querySelector('[data-e2e="arrow-down"]');
         
-        if (boutonSuivantTT) {
-            console.log("REDW1TT_SCR : Bouton TikTok trouvé, clic simulé.");
-            boutonSuivantTT.click();
-        } else {
-            // Alternative : Si le bouton n'est pas trouvé, on simule un scroll physique de la page
-            console.log("REDW1TT_SCR : Bouton introuvable, simulation de scroll.");
-            window.scrollBy({ top: window.innerHeight, behavior: 'smooth' });
-        }
+    } else if (url.includes("tiktok.com")) {
+        console.log("REDW1TT_SCR : TikTok détecté - Simulation de touche...");
+        
+        // METHODE ULTIME : On crée un faux événement de touche clavier "Flèche Bas"
+        const evenementTouche = new KeyboardEvent('keydown', {
+            key: 'ArrowDown',
+            keyCode: 40,
+            code: 'ArrowDown',
+            which: 40,
+            bubbles: true,
+            cancelable: true
+        });
+
+        // On balance cet événement directement sur le corps de la page (body)
+        document.body.dispatchEvent(evenementTouche);
     }
 }
 
 // --- GESTION DES RACCOURCIS CLAVIER ---
 document.addEventListener('keydown', (e) => {
-    // On convertit en minuscule pour 'S' et on vérifie 'ArrowDown'
+    // SÉCURITÉ CRITIQUE : Si l'événement est généré par le script (pas "Trusted"),
+    // on stoppe immédiatement pour éviter la boucle infinie sur TikTok !
+    if (!e.isTrusted) return;
+
     const key = e.key.toLowerCase();
     
     if (key === 's' || key === 'arrowdown') {
-        // On vérifie toujours si l'extension est activée avant d'agir
         chrome.storage.local.get(['enabled'], (result) => {
             if (result.enabled !== false) {
                 console.log("REDW1TT_SCR : Skip manuel via " + e.key);
                 passerAuSuivant();
-                
-                // Optionnel : On empêche le scroll natif si on veut que 
-                // notre script garde la priorité absolue
-                // e.preventDefault(); 
             }
         });
     }
