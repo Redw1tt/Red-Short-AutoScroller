@@ -25,23 +25,33 @@ chrome.storage.local.get(['enabled'], (result) => {
 });
 
 function passerAuSuivant() {
-    const isInstagram = window.location.hostname.includes('instagram.com');
+    const url = window.location.href;
 
-    if (isInstagram) {
-        // Logique Instagram : On cherche le bouton "Suivant" (Flèche du bas)
-        // Instagram change souvent ses classes, le plus fiable est de simuler la touche "Flèche Bas"
-        window.dispatchEvent(new KeyboardEvent('keydown', {
-            bubbles: true,
-            key: "ArrowDown",
-            keyCode: 40
-        }));
-        console.log("Insta Reel suivant !");
-    } else {
-        // Logique YouTube
-        const btnBas = document.querySelector('#navigation-button-down button');
-        if (btnBas) btnBas.click();
-        else window.dispatchEvent(new KeyboardEvent('keydown', {bubbles: true, key: "ArrowDown", keyCode: 40}));
-        console.log("YouTube Short suivant !");
+    if (url.includes("youtube.com")) {
+        // Logique YouTube Shorts
+        const boutonSuivantYT = document.querySelector('#navigation-button-down button, ytd-reel-video-renderer[is-active] #navigation-button-down');
+        if (boutonSuivantYT) boutonSuivantYT.click();
+
+    } else if (url.includes("instagram.com")) {
+        // Logique Instagram Reels
+        const boutonsIG = document.querySelectorAll('svg[aria-label="Flèche pointant vers le bas"], svg[aria-label="Down arrow"]');
+        if (boutonsIG.length > 0) {
+            const boutonSuivantIG = boutonsIG[0].closest('button');
+            if (boutonSuivantIG) boutonSuivantIG.click();
+        }
+    } else if (url.includes("tiktok.com")) {
+        // L'ANALYSE DU CODE POUR TIKTOK :
+        // Sur TikTok Web, les boutons de navigation ont des attributs de données "data-e2e"
+        const boutonSuivantTT = document.querySelector('[data-e2e="arrow-down"]');
+        
+        if (boutonSuivantTT) {
+            console.log("REDW1TT_SCR : Bouton TikTok trouvé, clic simulé.");
+            boutonSuivantTT.click();
+        } else {
+            // Alternative : Si le bouton n'est pas trouvé, on simule un scroll physique de la page
+            console.log("REDW1TT_SCR : Bouton introuvable, simulation de scroll.");
+            window.scrollBy({ top: window.innerHeight, behavior: 'smooth' });
+        }
     }
 }
 

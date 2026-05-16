@@ -1,21 +1,23 @@
 {
   "manifest_version": 3,
   "name": "REDW1TT SCROLLER",
-  "version": "1.2.2",
+  "version": "1.3.0",
+  "description": "Auto-scroll pour YT Shorts, IG Reels et TikTok",
+  "permissions": ["storage", "tabs"],
+  "host_permissions": [
+    "https://www.youtube.com/shorts/*",
+    "https://www.instagram.com/reels/*",
+    "https://www.tiktok.com/*"
+  ],
   "action": {
-    "default_popup": "popup.html",
-    "default_icon": "shuriken.png"
+    "default_popup": "popup.html"
   },
-  "icons": {
-    "128": "shuriken.png"
-  },
-  "permissions": ["storage"],
   "content_scripts": [
     {
       "matches": [
         "https://www.youtube.com/shorts/*",
         "https://www.instagram.com/reels/*",
-        "https://www.instagram.com/reels/videos/*"
+        "https://www.tiktok.com/*"
       ],
       "js": ["content.js"]
     }
